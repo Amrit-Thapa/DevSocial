@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://amrit123:amrit123@cluster0.pek3j.mongodb.net/MERNPROJECT2?retryWrites=true&w=majority",
+    "jwtSecret" : "thisismyserect"
+}
