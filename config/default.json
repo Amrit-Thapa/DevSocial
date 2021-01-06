@@ -1,4 +1,7 @@
 {
     "mongoURI" : "mongodb+srv://amrit123:amrit123@cluster0.pek3j.mongodb.net/MERNPROJECT2?retryWrites=true&w=majority",
-    "jwtSecret" : "thisismyserect"
+    "jwtSecret" : "thisismyserect",
+    "githubClientId" : "80a391d84de45a86918a",
+    "githubSecters" : "ce6ed5728bd3d1cef59a6107afe076c5041fd0d2",
+    "githubToken":"f8df961f4d913bb26ef85ef5c6cb48f5116ec84b"
 }
