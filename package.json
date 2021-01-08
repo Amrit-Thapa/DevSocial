@@ -4,8 +4,10 @@
   "description": "Social network for developer",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "server": "nodemon server"
+    "start": "npm run client",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently  \"npm run server\" \"npm run client\" "
   },
   "author": "Amrit Thapa",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.9.1",
     "gravatar": "^1.8.1",

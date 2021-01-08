@@ -1,13 +1,30 @@
 const express = require("express");
 const connectDB = require("./config/db");
+const cors = require("cors");
 
 const app = express();
+
+// cors allowing origin
+let allowedOrigins = ["http://localhost:3000"];
 
 //  Connect Database
 connectDB();
 
 // init Middleware
 app.use(express.json({ extended: false }));
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        var msg = "The CORS policy for this site does not allow access";
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+  })
+);
 
 app.get("/", (req, res) => res.send("API Running..!!"));
 
